@@ -14,6 +14,9 @@ Run the container:
 
 ```sh
 $ SELENIUM_CONTAINER=$(sudo docker run --privileged -p 4444:4444 -d eperoumalnaik/docker-chrome-selenium)
+
+docker exec $id sudo umount /dev/shm
+docker exec $id sudo mount -t tmpfs -o rw,nosuid,nodev,noexec,relatime,size=512M tmpfs /dev/shm
 ```
 
 Selenium server will be available on the host machine at port 4444. Web tests 
