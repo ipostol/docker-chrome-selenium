@@ -13,7 +13,7 @@ $ sudo docker pull eperoumalnaik/docker-chrome-selenium
 Run the container:
 
 ```sh
-$ SELENIUM_CONTAINER=$(sudo docker run --privileged -p 4444:4444 -d eperoumalnaik/docker-chrome-selenium)
+sudo docker run --privileged -p 4444:4444 -d eperoumalnaik/docker-chrome-selenium
 
 docker exec $id sudo umount /dev/shm
 docker exec $id sudo mount -t tmpfs -o rw,nosuid,nodev,noexec,relatime,size=512M tmpfs /dev/shm
@@ -28,5 +28,5 @@ https://github.com/dotcloud/docker/issues/1079).
 Shutting down the container:
 
 ```sh
-$ sudo docker kill $SELENIUM_CONTAINER
+$ sudo docker kill $id
 ```
