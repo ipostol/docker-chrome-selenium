@@ -13,6 +13,8 @@ $ sudo docker pull eperoumalnaik/docker-chrome-selenium
 Run the container:
 
 ```sh
+// -v /dev/shm:/dev/shm
+
 sudo docker run --privileged -p 4444:4444 -d eperoumalnaik/docker-chrome-selenium
 
 docker exec $id sudo umount /dev/shm
