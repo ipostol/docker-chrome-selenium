@@ -15,7 +15,7 @@ Run the container:
 ```sh
 // -v /dev/shm:/dev/shm
 
-sudo docker run --privileged -p 4444:4444 -d eperoumalnaik/docker-chrome-selenium
+sudo docker run --privileged -p 4444:4444 -d --shm-size=1g eperoumalnaik/docker-chrome-selenium
 
 docker exec $id sudo umount /dev/shm
 docker exec $id sudo mount -t tmpfs -o rw,nosuid,nodev,noexec,relatime,size=512M tmpfs /dev/shm
