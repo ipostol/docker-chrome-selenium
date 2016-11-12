@@ -16,6 +16,8 @@ Run the container:
 sudo docker run --privileged -p 4444:4444 -d --shm-size=1g eperoumalnaik/docker-chrome-selenium
 ```
 
+#### Memory for server, where you up selenium-server
+
 Selenium server will be available on the host machine at port 4444. Web tests 
 will run via headless chrome.
 
