@@ -11,6 +11,7 @@ RUN echo deb-src http://security.ubuntu.com/ubuntu trusty-security universe >> /
 RUN echo deb http://security.ubuntu.com/ubuntu trusty-security multiverse >> /etc/apt/sources.list
 RUN echo deb-src http://security.ubuntu.com/ubuntu trusty-security multiverse >> /etc/apt/sources.list
 
+RUN add-apt-repository ppa:openjdk-r/ppa
 RUN apt-get update
 RUN apt-get install -y -q wget unzip dpkg libnss3-1d
 RUN wget --no-check-certificate -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
