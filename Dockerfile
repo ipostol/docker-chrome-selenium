@@ -12,16 +12,16 @@ RUN echo deb http://security.ubuntu.com/ubuntu trusty-security multiverse >> /et
 RUN echo deb-src http://security.ubuntu.com/ubuntu trusty-security multiverse >> /etc/apt/sources.list
 
 RUN apt-get update
-# RUN apt-get install -y software-properties-common
-# RUN add-apt-repository ppa:openjdk-r/ppa
-# RUN apt-get update
+RUN apt-get install -y software-properties-common
+RUN add-apt-repository ppa:openjdk-r/ppa
+RUN apt-get update
 RUN apt-get install -y -q wget unzip dpkg libnss3-1d
 RUN wget --no-check-certificate -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
 ADD http://chromedriver.storage.googleapis.com/2.30/chromedriver_linux64.zip /srv/
 RUN unzip /srv/chromedriver_linux64.zip -d /srv
 RUN echo deb http://dl.google.com/linux/chrome/deb/ stable main >> /etc/apt/sources.list.d/google-chrome.list
 RUN apt-get update
-RUN apt-get install -q -y openjdk-7-jre-headless google-chrome-stable xvfb
+RUN apt-get install -q -y openjdk-8-jre-headless google-chrome-stable xvfb
 
 ADD ./install /
 ADD http://selenium-release.storage.googleapis.com/3.4/selenium-server-standalone-3.4.0.jar /srv/
