@@ -15,6 +15,7 @@ RUN apt-get update
 RUN apt-get install -y nodejs
 RUN apt-get install -y npm
 RUN npm -v
+RUN npm install -g webdriver-manager
 RUN apt-get install -y software-properties-common
 RUN add-apt-repository ppa:openjdk-r/ppa
 RUN apt-get update
