@@ -21,7 +21,7 @@ RUN apt-get update
 RUN apt-get install -q -y openjdk-7-jre-headless google-chrome-stable xvfb
 
 ADD ./install /
-ADD http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.0.jar /srv/
+ADD http://selenium-release.storage.googleapis.com/3.4/selenium-server-standalone-3.4.0.jar /srv/
 
 EXPOSE 4444
 
