@@ -18,7 +18,7 @@ ADD http://chromedriver.storage.googleapis.com/2.29/chromedriver_linux64.zip /sr
 RUN unzip /srv/chromedriver_linux64.zip -d /srv
 RUN echo deb http://dl.google.com/linux/chrome/deb/ stable main >> /etc/apt/sources.list.d/google-chrome.list
 RUN apt-get update
-RUN apt-get install -q -y openjdk-7-jre-headless google-chrome-stable xvfb
+RUN apt-get install -q -y openjdk-8-jre-headless google-chrome-stable xvfb
 
 ADD ./install /
 ADD http://selenium-release.storage.googleapis.com/3.4/selenium-server-standalone-3.4.0.jar /srv/
