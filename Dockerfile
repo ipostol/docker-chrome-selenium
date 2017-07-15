@@ -12,6 +12,8 @@ RUN echo deb http://security.ubuntu.com/ubuntu trusty-security multiverse >> /et
 RUN echo deb-src http://security.ubuntu.com/ubuntu trusty-security multiverse >> /etc/apt/sources.list
 
 RUN apt-get update
+RUN apt-get install -y nodejs
+RUN npm -v
 RUN apt-get install -y software-properties-common
 RUN add-apt-repository ppa:openjdk-r/ppa
 RUN apt-get update
